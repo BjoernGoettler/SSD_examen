@@ -29,3 +29,5 @@ The recommendation is to add the key to the ssh-agent. Otherwise there can be is
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/ssd_examen
 ```
+Now github shows that the committer is verified
+![Signed commit](images/github_showing_signed_commit.png)
