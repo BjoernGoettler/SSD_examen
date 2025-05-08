@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using Monitoring;
+using Serilog;
 
 public class ChatClient
 {
@@ -34,6 +35,7 @@ public class ChatClient
             byte[] messageBytes = Encoding.UTF8.GetBytes(encryptedMessage);
             stream.Write(messageBytes, 0, messageBytes.Length);
         }
+        Log.CloseAndFlush();
     }
 
     private static string EncryptMessage(string message)
