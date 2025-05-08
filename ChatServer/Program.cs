@@ -1,13 +1,15 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Microsoft.Extensions.Logging.Abstractions;
 using Monitoring;
+using Serilog;
 
 public class ChatServer
 {
     private static Dictionary<string, TcpClient> connectedClients = new Dictionary<string, TcpClient>();
     private static TcpListener tcpListener;
-    private static readonly int port = 6666;
+    private static readonly int port = 5000;
 
     public static void Main()
     {
@@ -79,5 +81,6 @@ public class ChatServer
         MonitorService.Log.Here().Debug("Disconnecting Client");
         client.Close();
         MonitorService.Log.Information($"Client disconnected");
+        Log.CloseAndFlush();
     }
 }
