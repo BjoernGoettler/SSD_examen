@@ -1,0 +1,16 @@
+services:
+  seq:
+    image: datalust/seq
+    ports:
+      - "5341:5341"
+      - "5342:80"
+    volumes:
+      - seq_data:/data
+    environment:
+      - ACCEPT_EULA=Y
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+volumes:
+  seq_data:
