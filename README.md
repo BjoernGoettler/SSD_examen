@@ -31,3 +31,9 @@ ssh-add ~/.ssh/ssd_examen
 ```
 Now github shows that the committer is verified
 ![Signed commit](images/github_showing_signed_commit.png)
+
+## CI/CD
+
+- Github
+ - CODEOWNERS file
+ - Branch protection rules
