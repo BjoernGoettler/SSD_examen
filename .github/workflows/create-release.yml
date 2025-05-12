@@ -46,6 +46,7 @@ jobs:
 
       - name: Merge main to release
         run: |
+          echo "$GITHUB_TOKEN"
           git checkout release
           git merge -X theirs --no-edit origin/main
           git push origin release
