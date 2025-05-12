@@ -7,6 +7,7 @@ on:
 
 jobs:
   create-release-and-merge:
+    environment: RELEASE
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -31,8 +32,8 @@ jobs:
 
       - name: Create Release Branch if not exists
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
           if ! git ls-remote --heads origin release; then
             git checkout -b release
             git push -u origin release
@@ -51,7 +52,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
           tag_name: v${{ steps.get-version.outputs.version }}
           release_name: Release v${{ steps.get-version.outputs.version }}
