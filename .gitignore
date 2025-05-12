@@ -54,3 +54,7 @@ TestResult.xml
 nunit-*.xml
 .idea
 .DS_Store
+
+# SBOM
+build
+!build/_manifest

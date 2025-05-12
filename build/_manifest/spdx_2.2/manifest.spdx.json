@@ -1,0 +1,1241 @@
+{
+  "files": [
+    {
+      "fileName": "./ChatServer",
+      "SPDXID": "SPDXRef-File--ChatServer-3A86C9052760E8AB33FD03BE672E78C4F2B64334",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c86740438ee80276b44e25ddc789492bdab16c85231c3c839df9b0624f8fae5c"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "3a86c9052760e8ab33fd03be672e78c4f2b64334"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Serilog.dll",
+      "SPDXID": "SPDXRef-File--Serilog.dll-8D6070FA66F51C4D14DB8E9A82BF0950F3F07923",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ba73b4bf7c8ef54303ad3ce540ac61855e0cd0d8396ad622059d43ccdea1c854"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "8d6070fa66f51c4d14db8e9a82bf0950f3f07923"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatServer.pdb",
+      "SPDXID": "SPDXRef-File--ChatServer.pdb-E0B7A61A9F45DEA1462172E557C2FFFF2A3BEA6E",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "85f8f49f03c11e4833199711097c6aa111df269af3c04630389b66538114d968"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "e0b7a61a9f45dea1462172e557c2ffff2a3bea6e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatServer.dll",
+      "SPDXID": "SPDXRef-File--ChatServer.dll-35BD35A1E2C75AD9957FB866CCEA933D7A2C548B",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "939106e9e96dab43a3d36b4b137b5c229b562df633fa8b64c909e52952bc15c7"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "35bd35a1e2c75ad9957fb866ccea933d7a2c548b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Logging.Configuration.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Logging.Configuration.dll-F0FA55E75FC9046A8D9C075DADE0679EF55FB2D1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ab309abb90efb69ea92dbe14c7acad3edd3d4088febc3b852b91a82f046c30b6"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "f0fa55e75fc9046a8d9c075dade0679ef55fb2d1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatClient.deps.json",
+      "SPDXID": "SPDXRef-File--ChatClient.deps.json-1F9213BD357EEDC97A1A97E63E07C8B025025B42",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6c400597731d1081750b13dac397f037a6c634b8b7241554c105dc80a1a27e91"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "1f9213bd357eedc97a1a97e63e07c8b025025b42"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Logging.Abstractions.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Logging.Abstractions.dll-17D729234C0A5BB29ACABD491950E7DC79DE15AE",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7c5e0d3133a4b6f36f500e641b5baa115a747d8c709b4d1b038149b5931f6aae"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "17d729234c0a5bb29acabd491950e7dc79de15ae"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./OpenTelemetry.dll",
+      "SPDXID": "SPDXRef-File--OpenTelemetry.dll-D046FDEA90834F617CA280E6587FC14B28CDCE33",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "42f160c17a301734a6c607465d26e7d30330f7494d32ae3ab1a7c6bdc2dd4310"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "d046fdea90834f617ca280e6587fc14b28cdce33"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Serilog.Sinks.File.dll",
+      "SPDXID": "SPDXRef-File--Serilog.Sinks.File.dll-477A1D5941D796E784FEB93CAAD41E54DB3AAC03",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fe02a7c70b0669b0e0449bf605d090be868eff0b11556db3156ec3d9834c47c6"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "477a1d5941d796e784feb93caad41e54db3aac03"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.DependencyInjection.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.DependencyInjection.dll-17ED08A06FF2FDBBD4AE62E7D34D3279D33D344A",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "09c80cce213152ced75d791fc4fd57b34f79a2026c69d133b0380f10128096ce"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "17ed08a06ff2fdbbd4ae62e7d34d3279d33d344a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Serilog.Sinks.Seq.dll",
+      "SPDXID": "SPDXRef-File--Serilog.Sinks.Seq.dll-9EFF2A7561AE1C1B714D5AC57D22AF204CCD142C",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2aabd8944b596ae972bb103887c1b9a1238575c2919c052e1b35fbb4b9f63ec8"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "9eff2a7561ae1c1b714d5ac57d22af204ccd142c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Configuration.Binder.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Configuration.Binder.dll-35264AEFCFDA81A3AADA6B4A808F7B8C0FEE1711",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "231dcfc3042cceb64351f68e59c569eba22226e89fa579b0ae961826339ddcd6"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "35264aefcfda81a3aada6b4a808f7b8c0fee1711"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Serilog.Sinks.Console.dll",
+      "SPDXID": "SPDXRef-File--Serilog.Sinks.Console.dll-83F6BC5D01624AA2C62F42D17FA41C579699D00E",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cd84c110a96a28b969f9b75873801ded483ff8e2396507e2a53ab977584f39c6"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "83f6bc5d01624aa2c62f42d17fa41c579699d00e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./OpenTelemetry.Exporter.Console.dll",
+      "SPDXID": "SPDXRef-File--OpenTelemetry.Exporter.Console.dll-08680C94628B88C3575C669A374530B025E26A67",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "649b6da9420e6c44113d5e4539d8873c66ea7a0e6d56a6b915b2af24c77ce2c5"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "08680c94628b88c3575c669a374530b025e26a67"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Options.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Options.dll-F1A182529615710829361A3BCDE8CB63C43BB001",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1e832bccb1b02d454ff3661b936f057673d38d167533f477334641b9fda29e6f"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "f1a182529615710829361a3bcde8cb63c43bb001"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatClient.pdb",
+      "SPDXID": "SPDXRef-File--ChatClient.pdb-D14D2778A8042276DD4356B19B0677EBF6897361",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7a2fe385650bad6d622aada3b1dec3da4bcf63a91102a95b4c46e8640e086fbb"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "d14d2778a8042276dd4356b19b0677ebf6897361"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./OpenTelemetry.Exporter.Zipkin.dll",
+      "SPDXID": "SPDXRef-File--OpenTelemetry.Exporter.Zipkin.dll-38D0DF57B3C1328FE87DB64C449F5E39CEB339EF",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5dd64295d2d3389e41a31427c91b36d70f38a61a347feceecf755a1c374b7bdd"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "38d0df57b3c1328fe87db64c449f5e39ceb339ef"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatClient",
+      "SPDXID": "SPDXRef-File--ChatClient-1342FAFF1EB43FB8CF25F9722BC6A765997FAEAB",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d2a6098efe19de5763c96882da5e5b80fe8247f4b15985d02d99034491f103ec"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "1342faff1eb43fb8cf25f9722bc6a765997faeab"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.DependencyInjection.Abstractions.dll-F030E73566B1BE8DA0BC03FD1A5D5A23871CFBB9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "99a08f73aa1568c8a614ac4d76fe1cf9a27e10f7c02f9afd65da2c6e25d6ff04"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "f030e73566b1be8da0bc03fd1a5d5a23871cfbb9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./OpenTelemetry.Api.dll",
+      "SPDXID": "SPDXRef-File--OpenTelemetry.Api.dll-2E71F92C4216B76A65456DAC59DF3BF6DECF4EC3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a5f99faf7b4669cedd46fd82a25a4e3a481adc19676b3c2e88e0b1f9f133365d"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "2e71f92c4216b76a65456dac59df3bf6decf4ec3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Configuration.Abstractions.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Configuration.Abstractions.dll-4382EB5F364F6F25154EA702B76604ADDCB6358E",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e63b332553874087ea3d8d770705e230db0c614a99d571ba64753281ac65b3ae"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "4382eb5f364f6f25154ea702b76604addcb6358e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatClient.runtimeconfig.json",
+      "SPDXID": "SPDXRef-File--ChatClient.runtimeconfig.json-110CA4C88FDE3821BF34749398C35EDD8C56178B",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9b93bb9ae8b1f2d369e6bfd31f183e2db18031236ff1171bb899522aea902297"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "110ca4c88fde3821bf34749398c35edd8c56178b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./OpenTelemetry.Api.ProviderBuilderExtensions.dll",
+      "SPDXID": "SPDXRef-File--OpenTelemetry.Api.ProviderBuilderExtensions.dll-6FB79E083A29ACD1E6BEE944B4D4D703FE5AA722",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a6629d4126cc79980ddd9f51f573fbc6220f74b095b0e0d407fc699d8701ea9d"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "6fb79e083a29acd1e6bee944b4d4d703fe5aa722"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Monitoring.pdb",
+      "SPDXID": "SPDXRef-File--Monitoring.pdb-59633A9502E5B850246F58F969C8DAE51CE18E3A",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "28a33490dc5b082af7d09f5fa2ac6df130840a6ad87ee698cd2cbfb8abba5248"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "59633a9502e5b850246f58f969c8dae51ce18e3a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Diagnostics.Abstractions.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Diagnostics.Abstractions.dll-AC31AD2CFD1E00E96E9C327BF40FC2467FE8C6CB",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1e9f80967afc35a4caca9b8743e1241df6dd17b0c72666cef96e338c10b167b9"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "ac31ad2cfd1e00e96e9c327bf40fc2467fe8c6cb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Options.ConfigurationExtensions.dll-9251E10079352A00F56244224341EAF29257E5DC",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "794e9ea487c5c7c17054371c63e61fe5d3636626ff99e5d985172393cdea512d"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "9251e10079352a00f56244224341eaf29257e5dc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Primitives.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Primitives.dll-171BBC5D2F8E5E9E1D056E132CCE1574AAA46ED6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c6d27b3e63d2eb232a2f766a9a9b3a840c97f87b94c9438092c09a10ab0b3c41"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "171bbc5d2f8e5e9e1d056e132cce1574aaa46ed6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatServer.runtimeconfig.json",
+      "SPDXID": "SPDXRef-File--ChatServer.runtimeconfig.json-110CA4C88FDE3821BF34749398C35EDD8C56178B",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9b93bb9ae8b1f2d369e6bfd31f183e2db18031236ff1171bb899522aea902297"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "110ca4c88fde3821bf34749398c35edd8c56178b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Logging.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Logging.dll-5D8CE5F42970484949A3AE92AD62F6BBE1ADF980",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "faed6cb5c9ca0d6077feaeb2df251251adccf0241f7a80b91c58e014cd5ad48f"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "5d8ce5f42970484949a3ae92ad62f6bbe1adf980"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Monitoring.deps.json",
+      "SPDXID": "SPDXRef-File--Monitoring.deps.json-B002385618C38B77F99179B8B63C9F90E8B907F9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6dfc10d2eeea6536a5fe5bebde358206361662883ce72d9e317003e117b2fafc"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "b002385618c38b77f99179b8b63c9f90e8b907f9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Microsoft.Extensions.Configuration.dll",
+      "SPDXID": "SPDXRef-File--Microsoft.Extensions.Configuration.dll-108C0BB291F10791161CBD277697A8F9B2F4E810",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d2ba98f7ca6f7ae49e54bb2974b22d62a15695d5a11236a164ae71eac87abcc5"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "108c0bb291f10791161cbd277697a8f9b2f4e810"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatServer.deps.json",
+      "SPDXID": "SPDXRef-File--ChatServer.deps.json-2854944F8FF9825CF0EABB09D0819ABFC753E0AB",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "726fe1c2f15585f410db8f2fd60fe83d0dbb203ab574381b65cada4410778bf7"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "2854944f8ff9825cf0eabb09d0819abfc753e0ab"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Monitoring.dll",
+      "SPDXID": "SPDXRef-File--Monitoring.dll-D8E8F659A93663B1CEA464D7C6DB5E0CCB05BDE5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1f5a538533b4a603f0790f5f1a280167bf27683afc85b14b2d289d7b95163ee6"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "d8e8f659a93663b1cea464d7c6db5e0ccb05bde5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ChatClient.dll",
+      "SPDXID": "SPDXRef-File--ChatClient.dll-D97423C25172A42C59F85A15A62AB7EEEA572FAF",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "759f2c9ed4da22090d2b9641e5823da45bbf3afdb3d41970033b16ec475ac441"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "d97423c25172a42c59f85a15a62ab7eeea572faf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Serilog.Sinks.Console",
+      "SPDXID": "SPDXRef-Package-CC1C097A0E1B096F27C8CE7242DDBAA8BFB7CDA55CCADF71B9BEDA9BA19AA750",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "6.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Serilog.Sinks.Console@6.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.DependencyInjection",
+      "SPDXID": "SPDXRef-Package-0880A2E12CD4BC98D28E36ED1ECB7376096AC0D871F9AE39BC86698C72BF938F",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.DependencyInjection@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "SPDXID": "SPDXRef-Package-179851C71BA9806C49C79F4E2DE3E9C8A704F6B6D4B51FE480B628021577331A",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.DependencyInjection.Abstractions@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Configuration.Abstractions",
+      "SPDXID": "SPDXRef-Package-C832BA1F104071A9770692759957B351F20DE358E560A3DDF8FD0FBBC61ADEAC",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Configuration.Abstractions@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "OpenTelemetry",
+      "SPDXID": "SPDXRef-Package-E0D37B069EE3EF2ADA0E9300F2B212C0BE7380CCCCB1E50E3326C4511BB5E1FD",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "1.12.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry@1.12.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "System.Diagnostics.DiagnosticSource",
+      "SPDXID": "SPDXRef-Package-A092770E8354CA90D85493FC4F2941F25FCE4214BAF8EB9A9E4383C495E133E9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/System.Diagnostics.DiagnosticSource@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Logging.Configuration",
+      "SPDXID": "SPDXRef-Package-7270C5C98FB64975BD6C49B84E3E5B9BD44C76425CA7097E964025F8B1470D84",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Logging.Configuration@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
+      "SPDXID": "SPDXRef-Package-5C48E1E47CF45F9BFE0A8BE285DB0CA3F39FD7D97FE1B01035B826C229D53CCF",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Options.ConfigurationExtensions@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Logging",
+      "SPDXID": "SPDXRef-Package-2456EEB5156191B768C724A3562B341945A6B23F64A003D3C82C0520DAE6C099",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Logging@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Diagnostics.Abstractions",
+      "SPDXID": "SPDXRef-Package-2474E31C0A70665C1D5A5B8D9CDB78E02021936AB76D8516DA19B447047AF207",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Diagnostics.Abstractions@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Serilog",
+      "SPDXID": "SPDXRef-Package-29DCA36EB5554B6831D5C3313EB168BDF79E85FC448338348632D81B0455044E",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "4.2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Serilog@4.2.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "OpenTelemetry.Exporter.Zipkin",
+      "SPDXID": "SPDXRef-Package-BF2E9C2B686F6714BC822892840902A756334AC134D51148BDEEA4892A5D285A",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "1.12.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry.Exporter.Zipkin@1.12.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Primitives",
+      "SPDXID": "SPDXRef-Package-7C226243FC515E7F464CC23E9C55DBCB921AF2F8348511BDA1716CD49C18489D",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Primitives@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "OpenTelemetry.Api.ProviderBuilderExtensions",
+      "SPDXID": "SPDXRef-Package-387BA96F14EC49649440E487F124C87B1F9CAC8524A4096409891EA258BEDA99",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "1.12.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry.Api.ProviderBuilderExtensions@1.12.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Serilog.Sinks.File",
+      "SPDXID": "SPDXRef-Package-4CC76DE73D5AAB43B651EC777CEE740E936A6095E1DD28A99DCBB15C55909C50",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "6.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Serilog.Sinks.File@6.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Configuration",
+      "SPDXID": "SPDXRef-Package-DE44FCD65895EF3FCDF2502014D982F00FEF904907DCE66863C7B71C933BAEAC",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Configuration@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Configuration.Binder",
+      "SPDXID": "SPDXRef-Package-D26E1E276C13EE79FC4C447F9A7E0F46C433478B7EFBF29924D48BFD1FD035DE",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Configuration.Binder@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "OpenTelemetry.Api",
+      "SPDXID": "SPDXRef-Package-897175F68743515BDAD4BDAE1AC8CE10ED8B907890A2F975EB487139076AC4F4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "1.12.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry.Api@1.12.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Serilog.Sinks.Seq",
+      "SPDXID": "SPDXRef-Package-447A0C68833E0852F6D421AF5D9CC1C8D7E245B67023518E9B1702BDF7ED7F77",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Serilog.Sinks.Seq@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Options",
+      "SPDXID": "SPDXRef-Package-F4C29C6A68281222EA2B8618AC96EBF23B2F63FA1DE6145A7AE381EA536C39AD",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Options@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "OpenTelemetry.Exporter.Console",
+      "SPDXID": "SPDXRef-Package-F40950E5E34B037883F78F802F8D270EDB825D15678576E7C2FE2D385FA8A38B",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "1.12.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry.Exporter.Console@1.12.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Microsoft.Extensions.Logging.Abstractions",
+      "SPDXID": "SPDXRef-Package-1E7AD705D55F0B02CF56790CCA941F9CE827E8B9E8AB18D395E24A1D96574B99",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "9.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Microsoft.Extensions.Logging.Abstractions@9.0.0"
+        }
+      ],
+      "supplier": "NOASSERTION"
+    },
+    {
+      "name": "Test",
+      "SPDXID": "SPDXRef-RootPackage",
+      "downloadLocation": "NOASSERTION",
+      "packageVerificationCode": {
+        "packageVerificationCodeValue": "741aa4b9ed6b9df9f3a6fd0003ab7f75ab6e1147"
+      },
+      "filesAnalyzed": true,
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "1.0.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:swid/EASV/github.com/Test@1.0.0?tag_id=0a1850bd-42ed-4437-996c-d2f4fb0f620a"
+        }
+      ],
+      "supplier": "Organization: EASV",
+      "hasFiles": [
+        "SPDXRef-File--ChatClient.pdb-D14D2778A8042276DD4356B19B0677EBF6897361",
+        "SPDXRef-File--ChatClient.deps.json-1F9213BD357EEDC97A1A97E63E07C8B025025B42",
+        "SPDXRef-File--ChatServer.pdb-E0B7A61A9F45DEA1462172E557C2FFFF2A3BEA6E",
+        "SPDXRef-File--ChatServer-3A86C9052760E8AB33FD03BE672E78C4F2B64334",
+        "SPDXRef-File--ChatClient.dll-D97423C25172A42C59F85A15A62AB7EEEA572FAF",
+        "SPDXRef-File--Monitoring.dll-D8E8F659A93663B1CEA464D7C6DB5E0CCB05BDE5",
+        "SPDXRef-File--ChatServer.deps.json-2854944F8FF9825CF0EABB09D0819ABFC753E0AB",
+        "SPDXRef-File--Microsoft.Extensions.Configuration.dll-108C0BB291F10791161CBD277697A8F9B2F4E810",
+        "SPDXRef-File--Microsoft.Extensions.Logging.dll-5D8CE5F42970484949A3AE92AD62F6BBE1ADF980",
+        "SPDXRef-File--Monitoring.deps.json-B002385618C38B77F99179B8B63C9F90E8B907F9",
+        "SPDXRef-File--ChatServer.runtimeconfig.json-110CA4C88FDE3821BF34749398C35EDD8C56178B",
+        "SPDXRef-File--Microsoft.Extensions.Primitives.dll-171BBC5D2F8E5E9E1D056E132CCE1574AAA46ED6",
+        "SPDXRef-File--Microsoft.Extensions.Options.ConfigurationExtensions.dll-9251E10079352A00F56244224341EAF29257E5DC",
+        "SPDXRef-File--Microsoft.Extensions.DependencyInjection.Abstractions.dll-F030E73566B1BE8DA0BC03FD1A5D5A23871CFBB9",
+        "SPDXRef-File--OpenTelemetry.Exporter.Zipkin.dll-38D0DF57B3C1328FE87DB64C449F5E39CEB339EF",
+        "SPDXRef-File--Serilog.Sinks.Console.dll-83F6BC5D01624AA2C62F42D17FA41C579699D00E",
+        "SPDXRef-File--ChatServer.dll-35BD35A1E2C75AD9957FB866CCEA933D7A2C548B",
+        "SPDXRef-File--Monitoring.pdb-59633A9502E5B850246F58F969C8DAE51CE18E3A",
+        "SPDXRef-File--ChatClient-1342FAFF1EB43FB8CF25F9722BC6A765997FAEAB",
+        "SPDXRef-File--Microsoft.Extensions.Options.dll-F1A182529615710829361A3BCDE8CB63C43BB001",
+        "SPDXRef-File--OpenTelemetry.dll-D046FDEA90834F617CA280E6587FC14B28CDCE33",
+        "SPDXRef-File--Serilog.dll-8D6070FA66F51C4D14DB8E9A82BF0950F3F07923",
+        "SPDXRef-File--Microsoft.Extensions.Diagnostics.Abstractions.dll-AC31AD2CFD1E00E96E9C327BF40FC2467FE8C6CB",
+        "SPDXRef-File--ChatClient.runtimeconfig.json-110CA4C88FDE3821BF34749398C35EDD8C56178B",
+        "SPDXRef-File--Microsoft.Extensions.Configuration.Abstractions.dll-4382EB5F364F6F25154EA702B76604ADDCB6358E",
+        "SPDXRef-File--OpenTelemetry.Api.dll-2E71F92C4216B76A65456DAC59DF3BF6DECF4EC3",
+        "SPDXRef-File--OpenTelemetry.Api.ProviderBuilderExtensions.dll-6FB79E083A29ACD1E6BEE944B4D4D703FE5AA722",
+        "SPDXRef-File--Microsoft.Extensions.Configuration.Binder.dll-35264AEFCFDA81A3AADA6B4A808F7B8C0FEE1711",
+        "SPDXRef-File--Microsoft.Extensions.DependencyInjection.dll-17ED08A06FF2FDBBD4AE62E7D34D3279D33D344A",
+        "SPDXRef-File--Microsoft.Extensions.Logging.Abstractions.dll-17D729234C0A5BB29ACABD491950E7DC79DE15AE",
+        "SPDXRef-File--OpenTelemetry.Exporter.Console.dll-08680C94628B88C3575C669A374530B025E26A67",
+        "SPDXRef-File--Serilog.Sinks.Seq.dll-9EFF2A7561AE1C1B714D5AC57D22AF204CCD142C",
+        "SPDXRef-File--Serilog.Sinks.File.dll-477A1D5941D796E784FEB93CAAD41E54DB3AAC03",
+        "SPDXRef-File--Microsoft.Extensions.Logging.Configuration.dll-F0FA55E75FC9046A8D9C075DADE0679EF55FB2D1"
+      ]
+    }
+  ],
+  "externalDocumentRefs": [],
+  "relationships": [
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RootPackage",
+      "spdxElementId": "SPDXRef-DOCUMENT"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-DE44FCD65895EF3FCDF2502014D982F00FEF904907DCE66863C7B71C933BAEAC",
+      "spdxElementId": "SPDXRef-Package-7270C5C98FB64975BD6C49B84E3E5B9BD44C76425CA7097E964025F8B1470D84"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-5C48E1E47CF45F9BFE0A8BE285DB0CA3F39FD7D97FE1B01035B826C229D53CCF",
+      "spdxElementId": "SPDXRef-Package-7270C5C98FB64975BD6C49B84E3E5B9BD44C76425CA7097E964025F8B1470D84"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-F40950E5E34B037883F78F802F8D270EDB825D15678576E7C2FE2D385FA8A38B",
+      "spdxElementId": "SPDXRef-RootPackage"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-387BA96F14EC49649440E487F124C87B1F9CAC8524A4096409891EA258BEDA99",
+      "spdxElementId": "SPDXRef-Package-E0D37B069EE3EF2ADA0E9300F2B212C0BE7380CCCCB1E50E3326C4511BB5E1FD"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-A092770E8354CA90D85493FC4F2941F25FCE4214BAF8EB9A9E4383C495E133E9",
+      "spdxElementId": "SPDXRef-Package-897175F68743515BDAD4BDAE1AC8CE10ED8B907890A2F975EB487139076AC4F4"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-1E7AD705D55F0B02CF56790CCA941F9CE827E8B9E8AB18D395E24A1D96574B99",
+      "spdxElementId": "SPDXRef-Package-2456EEB5156191B768C724A3562B341945A6B23F64A003D3C82C0520DAE6C099"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-4CC76DE73D5AAB43B651EC777CEE740E936A6095E1DD28A99DCBB15C55909C50",
+      "spdxElementId": "SPDXRef-Package-447A0C68833E0852F6D421AF5D9CC1C8D7E245B67023518E9B1702BDF7ED7F77"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-7270C5C98FB64975BD6C49B84E3E5B9BD44C76425CA7097E964025F8B1470D84",
+      "spdxElementId": "SPDXRef-Package-E0D37B069EE3EF2ADA0E9300F2B212C0BE7380CCCCB1E50E3326C4511BB5E1FD"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-F4C29C6A68281222EA2B8618AC96EBF23B2F63FA1DE6145A7AE381EA536C39AD",
+      "spdxElementId": "SPDXRef-Package-2474E31C0A70665C1D5A5B8D9CDB78E02021936AB76D8516DA19B447047AF207"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-BF2E9C2B686F6714BC822892840902A756334AC134D51148BDEEA4892A5D285A",
+      "spdxElementId": "SPDXRef-RootPackage"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-C832BA1F104071A9770692759957B351F20DE358E560A3DDF8FD0FBBC61ADEAC",
+      "spdxElementId": "SPDXRef-Package-DE44FCD65895EF3FCDF2502014D982F00FEF904907DCE66863C7B71C933BAEAC"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-2456EEB5156191B768C724A3562B341945A6B23F64A003D3C82C0520DAE6C099",
+      "spdxElementId": "SPDXRef-Package-7270C5C98FB64975BD6C49B84E3E5B9BD44C76425CA7097E964025F8B1470D84"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-179851C71BA9806C49C79F4E2DE3E9C8A704F6B6D4B51FE480B628021577331A",
+      "spdxElementId": "SPDXRef-Package-2474E31C0A70665C1D5A5B8D9CDB78E02021936AB76D8516DA19B447047AF207"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-D26E1E276C13EE79FC4C447F9A7E0F46C433478B7EFBF29924D48BFD1FD035DE",
+      "spdxElementId": "SPDXRef-Package-7270C5C98FB64975BD6C49B84E3E5B9BD44C76425CA7097E964025F8B1470D84"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-2474E31C0A70665C1D5A5B8D9CDB78E02021936AB76D8516DA19B447047AF207",
+      "spdxElementId": "SPDXRef-Package-E0D37B069EE3EF2ADA0E9300F2B212C0BE7380CCCCB1E50E3326C4511BB5E1FD"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-E0D37B069EE3EF2ADA0E9300F2B212C0BE7380CCCCB1E50E3326C4511BB5E1FD",
+      "spdxElementId": "SPDXRef-Package-F40950E5E34B037883F78F802F8D270EDB825D15678576E7C2FE2D385FA8A38B"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-447A0C68833E0852F6D421AF5D9CC1C8D7E245B67023518E9B1702BDF7ED7F77",
+      "spdxElementId": "SPDXRef-RootPackage"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-29DCA36EB5554B6831D5C3313EB168BDF79E85FC448338348632D81B0455044E",
+      "spdxElementId": "SPDXRef-Package-CC1C097A0E1B096F27C8CE7242DDBAA8BFB7CDA55CCADF71B9BEDA9BA19AA750"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-0880A2E12CD4BC98D28E36ED1ECB7376096AC0D871F9AE39BC86698C72BF938F",
+      "spdxElementId": "SPDXRef-Package-2456EEB5156191B768C724A3562B341945A6B23F64A003D3C82C0520DAE6C099"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-897175F68743515BDAD4BDAE1AC8CE10ED8B907890A2F975EB487139076AC4F4",
+      "spdxElementId": "SPDXRef-Package-387BA96F14EC49649440E487F124C87B1F9CAC8524A4096409891EA258BEDA99"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-7C226243FC515E7F464CC23E9C55DBCB921AF2F8348511BDA1716CD49C18489D",
+      "spdxElementId": "SPDXRef-Package-F4C29C6A68281222EA2B8618AC96EBF23B2F63FA1DE6145A7AE381EA536C39AD"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-Package-CC1C097A0E1B096F27C8CE7242DDBAA8BFB7CDA55CCADF71B9BEDA9BA19AA750",
+      "spdxElementId": "SPDXRef-RootPackage"
+    }
+  ],
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "Test 1.0.0",
+  "documentNamespace": "https://github.com/BjoernGoettler/SSD_Examen/Test/1.0.0/_OdRtAR160KEuTxKAFFlDA",
+  "creationInfo": {
+    "created": "2025-05-12T14:54:22Z",
+    "creators": [
+      "Organization: EASV",
+      "Tool: Microsoft.SBOMTool-3.1.0"
+    ]
+  },
+  "documentDescribes": [
+    "SPDXRef-RootPackage"
+  ]
+}
