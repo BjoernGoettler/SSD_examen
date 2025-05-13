@@ -4,14 +4,10 @@ using System.Text;
 using Monitoring;
 using Serilog;
 
-public class ChatClient
-{
-    private static string serverAddress = "127.0.0.1";
-    private static int serverPort = 5000;
-    private static TcpClient client = new TcpClient();
+namespace SSDExam.ChatClient;
 
-    public static void Main()
-    {
+
+
         MonitorService.Log.Information("Connecting to server");
         client.Connect(serverAddress, serverPort);
         var stream = client.GetStream();
@@ -59,4 +55,3 @@ public class ChatClient
             }
         }
     }
-}
