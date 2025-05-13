@@ -1,30 +1,25 @@
 using System.Net.Http.Headers;
 using System.Text.Json;
 using SSDExam.Authentication.Models;
-
-namespace SSDExam.Authentication;
-
-public class OktaAuthHandler
+using SSDExam.Authentication.Responses;
+public class Auth0AuthHandler
     {
         private readonly string _domain;
         private readonly string _clientId;
         private readonly string _clientSecret;
-        private readonly string _redirectUri;
-        private readonly string _authorizationServerId;
+        private readonly string _audience;
         private readonly HttpClient _httpClient;
 
-        public OktaAuthHandler(
-            string domain, 
-            string clientId, 
-            string clientSecret, 
-            string redirectUri,
-            string authorizationServerId = "default")
+        public Auth0AuthHandler(
+            string domain,
+            string clientId,
+            string clientSecret = null,
+            string audience = null)
         {
             _domain = domain;
             _clientId = clientId;
             _clientSecret = clientSecret;
-            _redirectUri = redirectUri;
-            _authorizationServerId = authorizationServerId;
+            _audience = audience;
             _httpClient = new HttpClient();
         }
 
@@ -55,41 +50,63 @@ public class OktaAuthHandler
 
         private async Task<DeviceAuthorizationResponse> InitiateDeviceAuthorizationFlow(string[] scopes)
         {
-            var deviceAuthUrl = $"https://{_domain}/oauth2/{_authorizationServerId}/v1/device/authorize";
+            // Auth0's device authorization endpoint
+            var deviceAuthUrl = $"https://{_domain}/oauth/device/code";
 
-            var content = new FormUrlEncodedContent(new Dictionary<string, string>
+            var requestData = new Dictionary<string, string>
             {
                 {"client_id", _clientId},
-                {"scope", string.Join(" ", scopes)},
-            });
+                {"scope", string.Join(" ", scopes)}
+            };
+            
 
-            var response = await _httpClient.PostAsync(deviceAuthUrl, content);
-            response.EnsureSuccessStatusCode();
+            var content = new FormUrlEncodedContent(requestData);
 
-            var responseJson = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<DeviceAuthorizationResponse>(responseJson, 
-                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            try
+            {
+                Console.WriteLine($"Connecting to: {deviceAuthUrl}");
+                var response = await _httpClient.PostAsync(deviceAuthUrl, content);
+                var responseBody = await response.Content.ReadAsStringAsync();
+                
+                Console.WriteLine($"Response status: {response.StatusCode}");
+                
+                response.EnsureSuccessStatusCode();
+                
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                };
+                
+                var deviceAuthResponse = JsonSerializer.Deserialize<DeviceAuthorizationResponse>(responseBody, options);
+
+                return deviceAuthResponse;
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"HTTP request error: {ex.Message}");
+                throw;
+            }
         }
 
         private async Task<AuthResult> PollForTokenAsync(string deviceCode, int interval)
         {
-            var tokenUrl = $"https://{_domain}/oauth2/{_authorizationServerId}/v1/token";
+            // Auth0's token endpoint
+            var tokenUrl = $"https://{_domain}/oauth/token";
             
-            var content = new FormUrlEncodedContent(new Dictionary<string, string>
+            var requestData = new Dictionary<string, string>
             {
-                {"client_id", _clientId},
+                {"grant_type", "urn:ietf:params:oauth:grant-type:device_code"},
                 {"device_code", deviceCode},
-                {"grant_type", "urn:ietf:params:oauth:grant-type:device_code"}
-            });
+                {"client_id", _clientId}
+            };
 
             if (!string.IsNullOrEmpty(_clientSecret))
             {
-                // Add basic auth header if client secret is provided
-                var authValue = Convert.ToBase64String(
-                    System.Text.Encoding.ASCII.GetBytes($"{_clientId}:{_clientSecret}"));
-                _httpClient.DefaultRequestHeaders.Authorization = 
-                    new AuthenticationHeaderValue("Basic", authValue);
+                requestData.Add("client_secret", _clientSecret);
             }
+
+            var content = new FormUrlEncodedContent(requestData);
 
             bool pending = true;
             DateTime timeout = DateTime.Now.AddMinutes(10); // 10 min timeout
@@ -106,7 +123,7 @@ public class OktaAuthHandler
                     var tokenResponse = JsonSerializer.Deserialize<TokenResponse>(responseJson, 
                         new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
                         
-                    // Get user info
+                    // Get user info if required
                     var userInfo = await GetUserInfoAsync(tokenResponse.AccessToken);
                     
                     return new AuthResult
@@ -142,7 +159,7 @@ public class OktaAuthHandler
                         return new AuthResult
                         {
                             IsAuthenticated = false,
-                            ErrorMessage = error.ErrorDescription
+                            ErrorMessage = error.ErrorDescription ?? error.Error
                         };
                     }
                 }
@@ -157,7 +174,7 @@ public class OktaAuthHandler
 
         private async Task<UserAccount> GetUserInfoAsync(string accessToken)
         {
-            var userInfoUrl = $"https://{_domain}/oauth2/{_authorizationServerId}/v1/userinfo";
+            var userInfoUrl = $"https://{_domain}/userinfo";
             
             using var request = new HttpRequestMessage(HttpMethod.Get, userInfoUrl);
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
@@ -166,11 +183,12 @@ public class OktaAuthHandler
             response.EnsureSuccessStatusCode();
             
             var userInfoJson = await response.Content.ReadAsStringAsync();
-            var userInfo = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(userInfoJson);
+            var userInfo = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(userInfoJson,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             
             return new UserAccount
             {
-                Username = GetStringValue(userInfo, "preferred_username") ?? GetStringValue(userInfo, "email"),
+                Username = GetStringValue(userInfo, "nickname") ?? GetStringValue(userInfo, "email"),
                 Email = GetStringValue(userInfo, "email"),
                 Claims = userInfo
             };
@@ -187,7 +205,7 @@ public class OktaAuthHandler
         {
             try
             {
-                var tokenUrl = $"https://{_domain}/oauth2/{_authorizationServerId}/v1/token";
+                var tokenUrl = $"https://{_domain}/oauth/token";
                 
                 var content = new FormUrlEncodedContent(new Dictionary<string, string>
                 {
@@ -210,7 +228,7 @@ public class OktaAuthHandler
                 {
                     IsAuthenticated = true,
                     AccessToken = tokenResponse.AccessToken,
-                    RefreshToken = tokenResponse.RefreshToken ?? refreshToken, // Some providers don't return a new refresh token
+                    RefreshToken = tokenResponse.RefreshToken ?? refreshToken,
                     ExpiresIn = tokenResponse.ExpiresIn,
                     IdToken = tokenResponse.IdToken,
                     TokenType = tokenResponse.TokenType,
