@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServer", "ChatServer\Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClient", "ChatClient\ChatClient.csproj", "{0503891D-676C-45E8-9A59-BB7CAEB71335}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSDExam.Authentication", "SSDExam.Authentication\SSDExam.Authentication.csproj", "{5D2B7CC5-A1ED-4EDF-9918-D7F33A567717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAuth", "TestAuth\TestAuth.csproj", "{AD37AC2F-46AA-4EB8-8C79-597C0F7754E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{0503891D-676C-45E8-9A59-BB7CAEB71335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0503891D-676C-45E8-9A59-BB7CAEB71335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0503891D-676C-45E8-9A59-BB7CAEB71335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D2B7CC5-A1ED-4EDF-9918-D7F33A567717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2B7CC5-A1ED-4EDF-9918-D7F33A567717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2B7CC5-A1ED-4EDF-9918-D7F33A567717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2B7CC5-A1ED-4EDF-9918-D7F33A567717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD37AC2F-46AA-4EB8-8C79-597C0F7754E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD37AC2F-46AA-4EB8-8C79-597C0F7754E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD37AC2F-46AA-4EB8-8C79-597C0F7754E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD37AC2F-46AA-4EB8-8C79-597C0F7754E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
