@@ -9,6 +9,7 @@ public class Auth0AuthHandler
         private readonly string _clientSecret;
         private readonly string _audience;
         private readonly HttpClient _httpClient;
+        private readonly  string[] _scopes = new[] { "openid", "profile", "email", "offline_access" };
 
         public Auth0AuthHandler(
             string domain,
@@ -23,12 +24,12 @@ public class Auth0AuthHandler
             _httpClient = new HttpClient();
         }
 
-        public async Task<AuthResult> LoginWithDeviceCodeAsync(string[] scopes)
+        public async Task<AuthResult> LoginWithDeviceCodeAsync()
         {
             try
             {
                 // Step 1: Start device authorization flow
-                var deviceAuthorizationResponse = await InitiateDeviceAuthorizationFlow(scopes);
+                var deviceAuthorizationResponse = await InitiateDeviceAuthorizationFlow();
 
                 // Step 2: Display instructions to user
                 Console.WriteLine($"To sign in, use a web browser to open the page {deviceAuthorizationResponse.VerificationUriComplete}");
@@ -48,7 +49,7 @@ public class Auth0AuthHandler
             }
         }
 
-        private async Task<DeviceAuthorizationResponse> InitiateDeviceAuthorizationFlow(string[] scopes)
+        private async Task<DeviceAuthorizationResponse> InitiateDeviceAuthorizationFlow()
         {
             // Auth0's device authorization endpoint
             var deviceAuthUrl = $"https://{_domain}/oauth/device/code";
@@ -56,7 +57,7 @@ public class Auth0AuthHandler
             var requestData = new Dictionary<string, string>
             {
                 {"client_id", _clientId},
-                {"scope", string.Join(" ", scopes)}
+                {"scope", string.Join(" ", _scopes)}
             };
             
 
