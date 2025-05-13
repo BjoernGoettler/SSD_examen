@@ -2,7 +2,7 @@ name: C# Build Verification
 
 on:
   push:
-    branches: [ github/build ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:  # Allows manual triggering
