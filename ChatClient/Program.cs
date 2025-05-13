@@ -4,54 +4,63 @@ using System.Text;
 using Monitoring;
 using Serilog;
 
-namespace SSDExam.ChatClient;
-
-
-
-        MonitorService.Log.Information("Connecting to server");
-        client.Connect(serverAddress, serverPort);
-        var stream = client.GetStream();
-
-        // Register the client
-        MonitorService.Log.Information("Registering client...");
-        byte[] registerMessage = Encoding.UTF8.GetBytes("REGISTER");
-        stream.Write(registerMessage, 0, registerMessage.Length);
-        
-        byte[] buffer = new byte[1024];
-        int bytesRead = stream.Read(buffer, 0, buffer.Length);
-        string clientId = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-        MonitorService.Log.Information($"Client registered with ID: {clientId}");
-
-        // Chat loop
-        while (true)
-        {
-            Console.Write("Enter message: ");
-            string message = Console.ReadLine();
-            string encryptedMessage = EncryptMessage(message);
-            byte[] messageBytes = Encoding.UTF8.GetBytes(encryptedMessage);
-            stream.Write(messageBytes, 0, messageBytes.Length);
-        }
-        Log.CloseAndFlush();
-    }
-
-    private static string EncryptMessage(string message)
+class Program
+{
+    static async Task Main(string[] args)
     {
-        using (Aes aesAlg = Aes.Create())
+        Console.Write("Enter your client ID: ");
+        string clientId = Console.ReadLine();
+        
+        Console.Write("Enter server address (default: localhost): ");
+        string serverAddress = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(serverAddress))
+            serverAddress = "localhost";
+        
+        Console.Write("Enter server port (default: 5000): ");
+        string portInput = Console.ReadLine();
+        int port = string.IsNullOrWhiteSpace(portInput) ? 5000 : int.Parse(portInput);
+        
+        using (var client = new SecureChatClient(clientId, serverAddress, port))
         {
-            aesAlg.GenerateKey();
-            aesAlg.GenerateIV();
-
-            ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
-            using (MemoryStream msEncrypt = new MemoryStream())
+            try
             {
-                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                await client.ConnectAsync();
+                
+                Console.WriteLine("\nCommands:");
+                Console.WriteLine("  sendkey <recipient> - Send your public key to a recipient");
+                Console.WriteLine("  msg <recipient> <message> - Send an encrypted message");
+                Console.WriteLine("  quit - Exit the application");
+                Console.WriteLine("\nYour public key:");
+                Console.WriteLine(client.GetPublicKey());
+                
+                while (true)
                 {
-                    using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                    Console.Write("> ");
+                    string input = Console.ReadLine();
+                    
+                    if (input.ToLower() == "quit")
+                        break;
+                    
+                    string[] parts = input.Split(' ', 3);
+                    
+                    if (parts[0].ToLower() == "sendkey" && parts.Length >= 2)
+                    {
+                        await client.SendPublicKeyAsync(parts[1]);
+                    }
+                    else if (parts[0].ToLower() == "msg" && parts.Length >= 3)
+                    {
+                        await client.SendMessageAsync(parts[1], parts[2]);
+                    }
+                    else
                     {
                         swEncrypt.Write(message);
                     }
                 }
-                return Convert.ToBase64String(msEncrypt.ToArray());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
     }
+}
