@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Monitoring\Monitoring.csproj" />
+      <ProjectReference Include="..\SSDExam.Authentication\SSDExam.Authentication.csproj" />
     </ItemGroup>
 
 </Project>
