@@ -19,7 +19,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
       <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="9.0.4" />
     </ItemGroup>
 
