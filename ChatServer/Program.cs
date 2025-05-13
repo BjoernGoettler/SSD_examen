@@ -1,86 +1,58 @@
-﻿using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using Microsoft.Extensions.Logging.Abstractions;
-using Monitoring;
-using Serilog;
+﻿using ChatServer;
 
-public class ChatServer
+
+Console.Write("Enter server port (default: 6666): ");
+string portInput = Console.ReadLine();
+int port = string.IsNullOrWhiteSpace(portInput) ? 6666 : int.Parse(portInput);
+
+var server = new SimpleChatServer(port);
+server.Start();
+
+Console.WriteLine("Server running. Press Enter to stop.");
+
+// Keep the server running until Enter is pressed
+var stopEvent = new ManualResetEvent(false);
+
+// Set up a console event handler to ensure the server keeps running
+Console.CancelKeyPress += (sender, e) =>
 {
-    private static Dictionary<string, TcpClient> connectedClients = new Dictionary<string, TcpClient>();
-    private static TcpListener tcpListener;
-    private static readonly int port = 5000;
+    e.Cancel = true; // Prevent the process from terminating
+    stopEvent.Set(); // Signal to exit gracefully
+};
 
-    public static void Main()
+// Command processing loop to keep the server interactive
+_ = Task.Run(() =>
+{
+    while (true)
     {
-        MonitorService.Log.Here().Information("Starting server");
-        tcpListener = new TcpListener(IPAddress.Any, port);
-        try
+        string command = Console.ReadLine()?.ToLower();
+
+        if (command == "quit" || command == "exit")
         {
-            MonitorService.Log.Here().Debug("Trying to start server");
-            tcpListener.Start();
+            stopEvent.Set();
+            break;
         }
-        catch (System.Net.Sockets.SocketException e)
+        else if (command == "status" || command == "stats")
         {
-            MonitorService.Log.Here().Debug("Exception thrown when starting server");
-            
-            // The following is just a help for panic situations when presenting. Proper logging will be introduced to take care of real exceptions
-            if (e.Message == "Address already in use")
-            {
-                MonitorService.Log.Here().Debug(e.ToString());
-                Console.WriteLine("Port {0} is already in use", port);
-                Console.WriteLine("Shut anything else using that port down and try again.");
-                Console.WriteLine("Or build with another port");
-                return;
-            }
-            
-            //If something happened that was not because of the port being used, we need to throw the exception again
-            MonitorService.Log.Here().Error(e, "Exception thrown when starting server");
-            throw;
-        } 
-        
-        MonitorService.Log.Here().Information("Server started");
-        Console.WriteLine("Server started, waiting for clients...");
-        
-        while (true)
+            server.PrintStatus();
+        }
+        else if (command == "help")
         {
-            var client = tcpListener.AcceptTcpClient();
-            new Thread(() => HandleClient(client)).Start();
+            Console.WriteLine("Available commands:");
+            Console.WriteLine("  status - Show server status");
+            Console.WriteLine("  quit   - Stop the server and exit");
+            Console.WriteLine("  help   - Show this help message");
+        }
+        else if (!string.IsNullOrWhiteSpace(command))
+        {
+            Console.WriteLine("Unknown command. Type 'help' for available commands.");
         }
     }
+});
 
-    private static void HandleClient(TcpClient client)
-    {
-        MonitorService.Log.Information("Client connected");
-        var stream = client.GetStream();
-        var buffer = new byte[1024];
-        int bytesRead;
+// Wait for the stop signal
+stopEvent.WaitOne();
 
-        while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
-        {
-            string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-            
-            // However tempting it might be. We can't allow the message to be logged
-            Console.WriteLine("Received: " + message);
-
-            // Register client (send unique ID or other registration logic)
-            if (message.StartsWith("REGISTER"))
-            {
-                MonitorService.Log.Here().Debug("Registering client");
-                string clientId = Guid.NewGuid().ToString();
-                connectedClients[clientId] = client;
-                var statusLine = $"Client registered with ID: {clientId}";
-                MonitorService.Log.Information(statusLine);
-                Console.WriteLine(statusLine);
-                
-                // Send client ID back to the client
-                byte[] response = Encoding.UTF8.GetBytes(clientId);
-                stream.Write(response, 0, response.Length);
-            }
-        }
-        MonitorService.Log.Here().Debug("Disconnecting Client");
-        client.Close();
-        MonitorService.Log.Information($"Client disconnected");
-        Log.CloseAndFlush();
-    }
-}
+Console.WriteLine("Stopping server...");
+server.Stop();
+Console.WriteLine("Server stopped.");
