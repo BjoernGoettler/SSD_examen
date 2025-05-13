@@ -1,8 +1,6 @@
-﻿using System.Net.Sockets;
-using System.Security.Cryptography;
-using System.Text;
-using Monitoring;
-using Serilog;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 class Program
 {
@@ -53,7 +51,7 @@ class Program
                     }
                     else
                     {
-                        swEncrypt.Write(message);
+                        Console.WriteLine("Unknown command or incorrect format.");
                     }
                 }
             }
