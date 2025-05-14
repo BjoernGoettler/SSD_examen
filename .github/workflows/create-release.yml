@@ -1,0 +1,79 @@
+name: Create Release and Merge to Release Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-release-and-merge:
+    environment: RELEASE
+    env:
+      GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.ACCESS_TOKEN }}
+          
+      - name: Configure Git Authentication
+        run: |
+          # Configure token-based authentication
+          echo "https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com" > ~/.git-credentials
+          git config --global credential.helper store
+          # Set up user identity
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          # Verify remote URL has been properly configured
+          git remote set-url origin "https://github.com/${{ github.repository }}.git"
+          git remote -v
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Get version from csproj
+        id: get-version
+        run: |
+          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" Directory.Build.props || grep -oPm1 "(?<=<Version>)[^<]+" **/*.csproj | head -1)
+          if [ -z "$VERSION" ]; then
+            VERSION=$(date +'%Y.%m.%d').${{ github.run_number }}
+          fi
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create Release Branch if not exists
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          if ! git ls-remote --heads origin release; then
+            git checkout -b release
+            git push -u origin release
+          else
+            git checkout release
+            git pull origin release
+          fi
+
+      - name: Merge main to release
+        run: |
+          echo "$GITHUB_TOKEN"
+          git checkout release
+          git merge -X theirs --no-edit origin/main
+          git push origin release
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ steps.get-version.outputs.version }}
+          release_name: Release v${{ steps.get-version.outputs.version }}
+          draft: false
+          prerelease: false
+          body: |
+            Release v${{ steps.get-version.outputs.version }}
+            
+            Changes in this release:
+            ${{ github.event.head_commit.message }}
