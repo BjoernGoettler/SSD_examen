@@ -3,7 +3,7 @@ name: Create Release and Merge to Release Branch
 on:
   push:
     branches:
-      - testbuild
+      - main
 
 jobs:
   create-release-and-merge:
