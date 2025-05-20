@@ -1,0 +1,39 @@
+@startuml SecureChatService
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+!$COLOR_A_5 = "#7f3b08"
+!$COLOR_A_4 = "#b35806"
+!$COLOR_A_3 = "#e08214"
+!$COLOR_A_2 = "#fdb863"
+!$COLOR_A_1 = "#fee0b6"
+!$COLOR_NEUTRAL = "#f7f7f7"
+!$COLOR_B_1 = "#d8daeb"
+!$COLOR_B_2 = "#b2abd2"
+!$COLOR_B_3 = "#8073ac"
+!$COLOR_B_4 = "#542788"
+!$COLOR_B_5 = "#2d004b"
+!$COLOR_REL_LINE = "#8073ac"
+!$COLOR_REL_TEXT = "#8073ac"
+
+!$ICONURL = "https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v3.0.0/icons"
+!include $ICONURL/common.puml
+!include $ICONURL/devicons/dotnet.puml
+!include $ICONURL/devicons2/csharp.puml
+!include $ICONURL/devicons2/dotnetcore.puml
+
+title Secure Chat
+
+Person(user, "Chatter")
+Component(chatclient, "Chat Client", "")
+Container_Boundary(authservice, "Auth Service") {
+    
+}
+Container_Boundary(chatservice, "Chat") {
+    Component(chatserver, "Chat Server", "dotnet", "Handles chat messages", "dotnetcore")
+}
+
+Rel_D(user, chatclient, "uses", "CLI")
+Rel_R(chatclient, authservice, "authorizes user", "OAuth")
+Rel_D(chatclient, chatserver, "registers chatter")
+
+@enduml
