@@ -12,12 +12,8 @@ public static class MonitorService
     // Here we setup OpenTelemetry in the monitorservice
     public static readonly string ServiceName = Assembly.GetCallingAssembly().GetName().Name ?? "Unknown";
     public static TracerProvider TracerProvider;
-    public static ActivitySource ActivitySource = new ActivitySource(ServiceName);
-    
-    // Here we make the logger use Serilog
-    public static ILogger Log
-        => Serilog.Log.Logger;
-    
+    public static ActivitySource ActivitySource = new(ServiceName);
+
     static MonitorService()
     {
         // OpenTelemetry
@@ -28,7 +24,7 @@ public static class MonitorService
             .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(ServiceName))
             .SetSampler(new AlwaysOnSampler())
             .Build();
-        
+
         // Serilog
         Serilog.Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Information()
@@ -36,4 +32,8 @@ public static class MonitorService
             .WriteTo.Seq("http://seq:5341")
             .CreateLogger();
     }
+
+    // Here we make the logger use Serilog
+    public static ILogger Log
+        => Serilog.Log.Logger;
 }

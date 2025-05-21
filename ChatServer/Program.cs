@@ -1,9 +1,8 @@
 ﻿using ChatServer;
 
-
 Console.Write("Enter server port (default: 6666): ");
-string portInput = Console.ReadLine();
-int port = string.IsNullOrWhiteSpace(portInput) ? 6666 : int.Parse(portInput);
+var portInput = Console.ReadLine();
+var port = string.IsNullOrWhiteSpace(portInput) ? 6666 : int.Parse(portInput);
 
 var server = new SimpleChatServer(port);
 server.Start();
@@ -25,14 +24,15 @@ _ = Task.Run(() =>
 {
     while (true)
     {
-        string command = Console.ReadLine()?.ToLower();
+        var command = Console.ReadLine()?.ToLower();
 
         if (command == "quit" || command == "exit")
         {
             stopEvent.Set();
             break;
         }
-        else if (command == "status" || command == "stats")
+
+        if (command == "status" || command == "stats")
         {
             server.PrintStatus();
         }
