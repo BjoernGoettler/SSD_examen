@@ -10,7 +10,9 @@ public static class LoggerExtensions
         [CallerMemberName] string memberName = "",
         [CallerFilePath] string sourceFilePath = "",
         [CallerLineNumber] int sourceLineNumber = 0)
-        => logger.ForContext("MemberName", memberName)
+    {
+        return logger.ForContext("MemberName", memberName)
             .ForContext("SourceFilePath", sourceFilePath)
             .ForContext("SourceLineNumber", sourceLineNumber);
+    }
 }
