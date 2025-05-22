@@ -1,5 +1,10 @@
 # Secure Software Development Synopsis
 
+
+### Github Repo
+The Github repo is here: https://github.com/BjoernGoettler/SSD_examen
+
+
 ## Project scope
 This project aims to demonstrate an implementation of two clients, exchanging public keys in order to communicate with each other with encrypted data. In the detailed description there will be an ongoing discussion of why not to implement a feature like that yourself, and suggestions on doing it in another way.
 In addition to the encrypted communication, a few initiatives are being demonstrated, to showcase how to take away security management from developers, and using automated tools where possible
