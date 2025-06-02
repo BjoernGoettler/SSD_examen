@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: 
 
 jobs:
   create-release-and-merge:
@@ -56,6 +57,22 @@ jobs:
             git checkout release
             git pull origin release
           fi
+      
+      - name: Restore dependencies
+        run: dotnet restore
+        
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      
+      
+      - name: Generate SBOM
+        run: |
+          # Install Microsoft SBOM tool
+          dotnet tool install --global Microsoft.Sbom.DotNetTool
+          
+          # Generate SBOM
+          sbom-tool generate -b . -bc . -pn ${{ github.event.repository.name }} -pv ${{ env.VERSION }} -ps ${{ github.repository_owner }} -nsb https://github.com/${{ github.repository }}
+
 
       - name: Merge main to release
         run: |
