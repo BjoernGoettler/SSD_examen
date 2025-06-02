@@ -31,7 +31,12 @@ jobs:
           git remote set-url origin "https://github.com/${{ github.repository }}.git"
           git remote -v
 
-      - name: Setup .NET
+      - name: Setup .NET 9.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Setup .NET 8.0 For the sake of sbom-tool
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '9.0.x'
@@ -69,6 +74,12 @@ jobs:
         run: |
           # Install Microsoft SBOM tool
           dotnet tool install --global Microsoft.Sbom.DotNetTool
+          
+
+          # Explicitly use .NET 8.0 for SBOM tool
+          export DOTNET_ROOT=/usr/share/dotnet
+          export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+          export DOTNET_ROLL_FORWARD=LatestMajor
           
           # Generate SBOM
           sbom-tool generate -b . -bc . -pn ${{ github.event.repository.name }} -pv ${{ env.VERSION }} -ps ${{ github.repository_owner }} -nsb https://github.com/${{ github.repository }}
